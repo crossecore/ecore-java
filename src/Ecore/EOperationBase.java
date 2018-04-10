@@ -57,12 +57,12 @@ extends ETypedElementImpl implements org.eclipse.emf.ecore.EOperation
 	}
 	public int getOperationID()
 	{
-	    return null;
+	    return 0;
 	}
 	public boolean isOverrideOf(EOperation someOperation
 	)
 	{
-	    return null;
+	    return false;
 	}
 
 	/*

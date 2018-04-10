@@ -19,7 +19,7 @@ public interface EcoreFactory extends EFactory{
 	EReference createEReference();
 	EStructuralFeature createEStructuralFeature();
 	ETypedElement createETypedElement();
-	EStringToStringMapEntry createEStringToStringMapEntry();
+	java.util.Map.Entry<String, String> createEStringToStringMapEntry();
 	EGenericType createEGenericType();
 	ETypeParameter createETypeParameter();
 }

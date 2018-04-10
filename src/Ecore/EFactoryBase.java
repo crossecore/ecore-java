@@ -37,7 +37,7 @@ extends EModelElementImpl implements org.eclipse.emf.ecore.EFactory
 	Object instanceValue
 	)
 	{
-	    return null;
+	    return "";
 	}
 	public Object createFromString(EDataType eDataType,
 	String literalValue

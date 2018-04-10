@@ -53,12 +53,12 @@ extends EModelElementImpl implements org.eclipse.emf.ecore.EAnnotation
 			eNotify(new ENotificationImpl(this, NotificationImpl.SET,EcorePackageImpl.EANNOTATION_EMODELELEMENT , value, value));
 		}
 	}
-	private Ocllib.OrderedSet<EStringToStringMapEntry> _details;
+	private Ocllib.OrderedSet<Map.Entry<String, String>> _details;
 	
-	public Ocllib.OrderedSet<EStringToStringMapEntry> getDetails()
+	public Ocllib.OrderedSet<Map.Entry<String, String>> getDetails()
 	{
 		if(_details==null){
-			_details = new Ocllib.OrderedSet<EStringToStringMapEntry>(this, EcorePackageImpl.EANNOTATION_DETAILS, EOPPOSITE_FEATURE_BASE - EcorePackageImpl.EANNOTATION_DETAILS);
+			_details = new Ocllib.OrderedSet<Map.Entry<String, String>>(this, EcorePackageImpl.EANNOTATION_DETAILS, EOPPOSITE_FEATURE_BASE - EcorePackageImpl.EANNOTATION_DETAILS);
 		}
 		return _details;
 	
@@ -142,7 +142,7 @@ extends EModelElementImpl implements org.eclipse.emf.ecore.EAnnotation
 				return;
 			case EcorePackageImpl.EANNOTATION_DETAILS:
 				getDetails().clear();
-				getDetails().addAll((java.util.Collection<? extends EStringToStringMapEntry>) newValue);
+				getDetails().addAll((java.util.Collection<? extends Map.Entry<String, String>>) newValue);
 				return;
 			case EcorePackageImpl.EANNOTATION_EMODELELEMENT:
 				setEModelElement((EModelElement) newValue);

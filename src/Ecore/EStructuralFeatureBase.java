@@ -113,7 +113,7 @@ extends ETypedElementImpl implements org.eclipse.emf.ecore.EStructuralFeature
 	}
 	public int getFeatureID()
 	{
-	    return null;
+	    return 0;
 	}
 	public Class getContainerClass()
 	{

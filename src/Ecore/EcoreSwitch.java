@@ -163,7 +163,7 @@ public class EcoreSwitch<T> extends org.eclipse.emf.ecore.util.Switch<T> {
 				return result;
 			}
 			case EcorePackageImpl.ESTRINGTOSTRINGMAPENTRY: {
-				EStringToStringMapEntry estringtostringmapentry = (EStringToStringMapEntry) theEObject;
+				java.util.Map.Entry<String, String> estringtostringmapentry = (java.util.Map.Entry<String, String>) theEObject;
 				T result = caseEStringToStringMapEntry(estringtostringmapentry);
 				
 				
@@ -242,7 +242,7 @@ public class EcoreSwitch<T> extends org.eclipse.emf.ecore.util.Switch<T> {
 	public T caseETypedElement(ETypedElement theEObject) {
 		return null;
 	}
-	public T caseEStringToStringMapEntry(EStringToStringMapEntry theEObject) {
+	public T caseEStringToStringMapEntry(java.util.Map.Entry<String, String> theEObject) {
 		return null;
 	}
 	public T caseEGenericType(EGenericType theEObject) {

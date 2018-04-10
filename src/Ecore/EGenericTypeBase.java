@@ -110,7 +110,7 @@ extends org.eclipse.emf.ecore.impl.BasicEObjectImpl implements org.eclipse.emf.e
 	public boolean isInstance(Object object_
 	)
 	{
-	    return null;
+	    return false;
 	}
 
 	/*

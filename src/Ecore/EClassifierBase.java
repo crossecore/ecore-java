@@ -59,12 +59,12 @@ extends ENamedElementImpl implements org.eclipse.emf.ecore.EClassifier
 	}
 	public int getClassifierID()
 	{
-	    return null;
+	    return 0;
 	}
 	public boolean isInstance(Object object_
 	)
 	{
-	    return null;
+	    return false;
 	}
 
 	/*

@@ -16,22 +16,20 @@ extends org.eclipse.emf.ecore.impl.BasicEObjectImpl implements org.eclipse.emf.e
 	public boolean eIsSet(EStructuralFeature feature
 	)
 	{
-	    return null;
+	    return false;
 	}
 	public boolean eIsProxy()
 	{
-	    return null;
+	    return false;
 	}
 	public void eUnset(EStructuralFeature feature
 	)
 	{
-	    return null;
 	}
 	public void eSet(EStructuralFeature feature,
 	Object newValue
 	)
 	{
-	    return null;
 	}
 	public org.eclipse.emf.ecore.resource.Resource eResource()
 	{

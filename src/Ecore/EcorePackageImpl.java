@@ -13,7 +13,7 @@ public class EcorePackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 		
 		private EcorePackageImpl()
 		{
-			super(eNS_URI, EcoreFactoryImpl.eINSTANCE)
+			super(eNS_URI, EcoreFactoryImpl.eINSTANCE);
 		}
 		
 	            public static EcorePackage init()
@@ -139,7 +139,7 @@ public class EcorePackageImpl extends org.eclipse.emf.ecore.impl.EPackageImpl im
 			
         }
         
-        private Boolean isInitialized = false;
+        private boolean isInitialized = false;
         public void initializePackageContents()
         {
 	                if (isInitialized) return;

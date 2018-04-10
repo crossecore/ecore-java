@@ -77,7 +77,7 @@ public class EcoreFactoryImpl extends org.eclipse.emf.ecore.impl.EFactoryImpl im
 		ETypedElementImpl theETypedElement = new ETypedElementImpl();
 		return theETypedElement;
 	}
-	public EStringToStringMapEntry createEStringToStringMapEntry(){
+	public java.util.Map.Entry<String, String> createEStringToStringMapEntry(){
 		EStringToStringMapEntryImpl theEStringToStringMapEntry = new EStringToStringMapEntryImpl();
 		return theEStringToStringMapEntry;
 	}

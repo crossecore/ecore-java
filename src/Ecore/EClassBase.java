@@ -168,16 +168,16 @@ extends EClassifierImpl implements org.eclipse.emf.ecore.EClass
 	public int getOperationID(EOperation operation
 	)
 	{
-	    return null;
+	    return 0;
 	}
 	public int getOperationCount()
 	{
-	    return null;
+	    return 0;
 	}
 	public boolean isSuperTypeOf(EClass someClass
 	)
 	{
-	    return null;
+	    return false;
 	}
 	public EStructuralFeature getEStructuralFeature(int featureID
 	)
@@ -187,7 +187,7 @@ extends EClassifierImpl implements org.eclipse.emf.ecore.EClass
 	public int getFeatureID(EStructuralFeature feature
 	)
 	{
-	    return null;
+	    return 0;
 	}
 	public EOperation getOverride(EOperation operation
 	)
@@ -196,7 +196,7 @@ extends EClassifierImpl implements org.eclipse.emf.ecore.EClass
 	}
 	public int getFeatureCount()
 	{
-	    return null;
+	    return 0;
 	}
 
 	/*
