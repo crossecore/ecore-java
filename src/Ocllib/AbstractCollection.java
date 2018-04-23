@@ -21,32 +21,41 @@ public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T
     private InternalEObject owner;
     private int featureId = NO_FEATURE;
     private int oppositeFeatureId = NO_FEATURE;
+    private Class<?> dataClass = null;
 
-
-
-
-    public AbstractCollection()
+    public AbstractCollection(Class<?> dataClass)
     {
-        this(null, NO_FEATURE);
+        this(dataClass, null, NO_FEATURE);
     }
     
 
 
-    public AbstractCollection(InternalEObject owner, int featureId)
+    public AbstractCollection(Class<?> dataClass, InternalEObject owner, int featureId)
     {
 
-    	this(owner, featureId, NO_FEATURE);
+    	this(dataClass,owner, featureId, NO_FEATURE);
 
     }
 
-    public AbstractCollection(InternalEObject owner, int featureId, int oppositeFeatureId)
+    public AbstractCollection(Class<?> dataClass, InternalEObject owner, int featureId, int oppositeFeatureId)
     {
-        //TODO: set dataclass?
-    	super(null, owner);
-        this.owner = owner;
-        this.featureId = featureId;
-        this.oppositeFeatureId = oppositeFeatureId;
+    	super(dataClass, owner);
+    	
+    	this.owner = owner;
+    	this.featureId = featureId;
+    	this.oppositeFeatureId = oppositeFeatureId;
     }
+    
+    @Override
+	protected boolean isNotificationRequired() {
+    	if(owner!=null) {
+    		return super.isNotificationRequired();
+    	}
+    	return false;
+	}
+
+
+
 	
 	
 	@Override
@@ -107,7 +116,7 @@ public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T
 
 	@Override
 	public Set<T> asSet() {
-		Set<T> result = new Set<T>();
+		Set<T> result = new Set<T>(dataClass);
 		
 		for(Iterator<T> iter = this.iterator();iter.hasNext();) {
 			
@@ -122,7 +131,7 @@ public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T
 
 	@Override
 	public OrderedSet<T> asOrderedSet() {
-		OrderedSet<T> result = new OrderedSet<T>();
+		OrderedSet<T> result = new OrderedSet<T>(dataClass);
 		
 		for(Iterator<T> iter = this.iterator();iter.hasNext();) {
 			
@@ -136,7 +145,7 @@ public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T
 
 	@Override
 	public Sequence<T> asSequence() {
-		Sequence<T> result = new Sequence<T>();
+		Sequence<T> result = new Sequence<T>(dataClass);
 		
 		for(Iterator<T> iter = this.iterator();iter.hasNext();) {
 			
@@ -151,7 +160,7 @@ public class AbstractCollection<T> extends EcoreEList<T> implements Collection<T
 	@Override
 	public Bag<T> asBag() {
 
-		Bag<T> result = new Bag<T>();
+		Bag<T> result = new Bag<T>(dataClass);
 		
 		result.addAll(this);
 		
