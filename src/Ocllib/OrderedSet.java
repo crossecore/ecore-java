@@ -32,6 +32,11 @@ public class OrderedSet<T> extends AbstractCollection<T> {
     	super(dataClass, owner, featureId, oppositeFeatureId);
     	this.dataClass = dataClass;
     }
+    
+    public OrderedSet(InternalEObject owner, int featureId, int oppositeFeatureId)
+    {
+    	super(null, owner, featureId, oppositeFeatureId);
+    }
 	
 	
 	public T at(int i) {

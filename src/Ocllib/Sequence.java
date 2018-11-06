@@ -29,5 +29,10 @@ public class Sequence<T> extends AbstractCollection<T> {
     	super(dataClass, owner, featureId, oppositeFeatureId);
     	this.dataClass = dataClass;
     }
+    
+	@Override
+	protected boolean isUnique() {
+		return false;
+	}
 
 }
